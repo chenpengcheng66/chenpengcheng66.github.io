@@ -24,7 +24,7 @@ body {
 
 
 .profile-pic {
-  width: 120px;        /* 控制宽度 */
+  width: 150px;        /* 控制宽度 */
   height: auto;        /* 保持原始比例 */
   border-radius: 0;    /* 不要圆角，保持矩形 */
   object-fit: contain; /* 保证照片完整显示，不会被裁剪 */
