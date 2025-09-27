@@ -39,23 +39,6 @@ function renderPapers(papers) {
   });
 }
 
-function renderConfs(confs) {
-  const table = document.querySelector(".paper-list");
-  confs.forEach((conf, index) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${index + 1}.</td>
-      <td>
-        <strong>${conf.title}</strong><br>
-        ${conf.authors}<br>
-        <em>${conf.venue}</em><br>
-        <a href="${conf.pdf}" target="_blank">[PDF]</a>
-      </td>
-    `;
-    table.appendChild(row);
-  });
-}
-
 // 科研项目
 function renderProjects(projects) {
   const ul = document.querySelector(".project-list");
