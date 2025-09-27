@@ -1,14 +1,8 @@
 [
   {
-    "title": "论文题目1",
-    "authors": "张三, 李四",
-    "venue": "《某某学报》, 2024",
+    "title": "Automated Detection of Hyperbola-Shaped Signature in Sub-Bottom Profiler Sonar Image with Morphological Processing",
+    "authors": "Pengcheng Chen, Shaoping Lu, Chen Cai",
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing, vol. 62, pp. 1-14, 2024 ",
     "pdf": "assets/papers/paper1.pdf"
-  },
-  {
-    "title": "论文题目2",
-    "authors": "张三, 王五",
-    "venue": "国际会议ABC, 2023",
-    "pdf": "assets/papers/paper2.pdf"
   }
 ]
