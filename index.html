@@ -9,50 +9,67 @@
 <body>
   <div class="container">
 
-    <!-- 左侧个人信息卡片 -->
+    <!-- 左侧个人信息 -->
     <aside class="sidebar">
       <img src="assets/me.jpg" alt="我的照片" class="profile-pic">
       <h1>你的名字</h1>
       <p><strong>单位：</strong>某某大学 · 某某学院</p>
       <p><strong>研究方向：</strong>声呐数据处理 / 地球物理成像 / 并行计算</p>
-      <p><strong>Email：</strong><a href="mailto:yourname@email.com">yourname@email.com</a></p>
-      <p><a href="https://scholar.google.com">Google Scholar</a> | 
-         <a href="https://github.com/yourname">GitHub</a></p>
+      <p><strong>Email：</strong>
+        <a href="mailto:your@email.com">your@email.com</a>
+      </p>
+      <p>
+        <a href="https://scholar.google.com" target="_blank">Google Scholar</a> | 
+        <a href="https://github.com/yourname" target="_blank">GitHub</a>
+      </p>
     </aside>
 
-    <!-- 右侧内容区 -->
+    <!-- 右侧主要内容 -->
     <main class="content">
+
+      <!-- 新闻动态 -->
+      <section>
+        <h2>最新动态</h2>
+        <ul class="news-list"></ul>
+      </section>
+
+      <!-- 关于我 -->
       <section>
         <h2>关于我</h2>
         <p>
-          我目前是某某大学的教师/博士研究生，主要从事声呐数据自动解释、
-          深海地球物理勘探以及高性能计算在地球科学中的应用研究。
+          我目前是某某大学的教师/博士研究生，研究方向包括声呐数据自动解释、
+          深海地球物理勘探和高性能计算在地球科学中的应用。
         </p>
       </section>
 
+      <!-- 学术论文 -->
       <section>
         <h2>学术论文</h2>
-        <table class="paper-list">
-          <tr>
-            <td>1.</td>
-            <td>
-              <strong>论文题目1</strong><br>
-              <em>期刊名, 年份</em>  
-              <a href="assets/papers/paper1.pdf" target="_blank">[PDF]</a>
-            </td>
-          </tr>
-          <tr>
-            <td>2.</td>
-            <td>
-              <strong>论文题目2</strong><br>
-              <em>会议名, 年份</em>  
-              <a href="assets/papers/paper2.pdf" target="_blank">[PDF]</a>
-            </td>
-          </tr>
-        </table>
+        <table class="paper-list"></table>
       </section>
-    </main>
 
+      <!-- 科研项目 -->
+      <section>
+        <h2>科研项目</h2>
+        <ul class="project-list"></ul>
+      </section>
+
+      <!-- 教学经历 -->
+      <section>
+        <h2>教学经历</h2>
+        <ul class="teaching-list"></ul>
+      </section>
+
+      <!-- 荣誉与获奖 -->
+      <section>
+        <h2>荣誉与获奖</h2>
+        <ul class="award-list"></ul>
+      </section>
+
+    </main>
   </div>
+
+  <!-- 引入脚本 -->
+  <script src="script.js"></script>
 </body>
 </html>
