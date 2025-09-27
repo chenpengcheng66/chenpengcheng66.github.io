@@ -1,0 +1,14 @@
+[
+  {
+    "title": "论文题目1",
+    "authors": "张三, 李四",
+    "venue": "《某某学报》, 2024",
+    "pdf": "assets/papers/paper1.pdf"
+  },
+  {
+    "title": "论文题目2",
+    "authors": "张三, 王五",
+    "venue": "国际会议ABC, 2023",
+    "pdf": "assets/papers/paper2.pdf"
+  }
+]
