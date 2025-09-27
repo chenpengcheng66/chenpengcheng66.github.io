@@ -41,7 +41,7 @@ function renderPapers(papers) {
 
 // 学术论文
 function renderConfs(confs) {
-  const table = document.querySelector(".conf-list");
+  const table = document.querySelector(".paper-list");
   confs.forEach((conf, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
