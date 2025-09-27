@@ -3,53 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的学术主页</title>
+  <title>Pengcheng Chen Profile - Pengcheng Chen</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 顶部标头 -->
-  <header class="header">
-    <div class="profile">
-      <img src="assets/me.jpg" alt="我的照片">
-    </div>
-    <div class="intro">
-      <h1>张三 博士</h1>
-      <p>某某大学 · 计算机学院</p>
-      <p>研究方向：声呐探测、地球物理数据处理、智能解释方法</p>
-      <p>Email: zhangsan@example.com</p>
-    </div>
-  </header>
+  <div class="container">
 
-  <!-- 标签结构 -->
-  <main>
-    <div class="tabs">
-      <button class="tab-button active" data-tab="papers">论文</button>
-      <button class="tab-button" data-tab="projects">项目</button>
-      <button class="tab-button" data-tab="teaching">教学</button>
-      <button class="tab-button" data-tab="awards">获奖</button>
-      <button class="tab-button" data-tab="news">新闻</button>
-    </div>
+    <!-- 左侧个人信息 -->
+    <aside class="sidebar">
+      <img src="assets/chen.jpg" alt="我的照片" class="profile-pic">
+      <h1>Pengcheng Chen (陈鹏程)</h1>
+      <p></strong>SouthWest Petroleum University · School of Computer Science and Software Engineering</p>
+      <p><strong>Research interests：</strong>Sonar data processing / Image processing for geophysics / Parallel computing</p>
+      <p><strong>Email：</strong>
+        <a href="mailto:chenpengcheng66@outlook.com">chenpengcheng66@outlook.com</a>
+      </p>
+      <p>
+        <a href="https://scholar.google.com/citations?user=zns2BjIAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a> | 
+        <a href="https://github.com/chenpengcheng66" target="_blank">GitHub</a>
+      </p>
+    </aside>
 
-    <div class="tab-content active" id="papers">
-      <table class="paper-list"></table>
-    </div>
+    <!-- 右侧主要内容 -->
+    <main class="content">
 
-    <div class="tab-content" id="projects">
-      <ul class="project-list"></ul>
-    </div>
+      <!-- 新闻动态 -->
+      <section>
+        <h2>News</h2>
+        <ul class="news-list"></ul>
+      </section>
 
-    <div class="tab-content" id="teaching">
-      <ul class="teaching-list"></ul>
-    </div>
+      <!-- 关于我 -->
+      <section>
+        <h2>About me</h2>
+        <p>
+          Pengcheng Chen (Graduate Student Member, IEEE)
+          received the B.S. degree in electronic information science and technology and the M.E. degree
+          in software engineering from Southwest Petroleum
+          University, Chengdu, China, in 2015 and 2020,
+          respectively. He is currently pursuing the Ph.D.
+          degree in geophysics with the School of Earth
+          Science and Engineering, Sun Yat-sen University,
+          Guangzhou, China.
+          
+          He worked as a Research Associate with the
+          School of Resources and Environment, University of
+          Electronic Science and Technology of China, Chengdu, in 2021. His research
+          interests include high-performance computing, acoustic signal analysis, and
+          image processing for geophysics
+        </p>
+      </section>
 
-    <div class="tab-content" id="awards">
-      <ul class="award-list"></ul>
-    </div>
+      <section>
+        <h2>Papers</h2>
+        <table class="paper-list"></table>
+      </section>
 
-    <div class="tab-content" id="news">
-      <ul class="news-list"></ul>
-    </div>
-  </main>
+      <section>
+        <h2>Project</h2>
+        <ul class="project-list"></ul>
+      </section>
+
+      <section>
+        <h2>Teaching</h2>
+        <ul class="teaching-list"></ul>
+      </section>
+      <section>
+        <h2>Pride</h2>
+        <ul class="award-list"></ul>
+      </section>
+
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
