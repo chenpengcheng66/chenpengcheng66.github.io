@@ -73,7 +73,6 @@ function renderAwards(awards) {
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
-  loadData("data/confs.json", renderConfs);
   loadData("data/projects.json", renderProjects);
   loadData("data/teaching.json", renderTeaching);
   loadData("data/awards.json", renderAwards);
