@@ -39,6 +39,24 @@ function renderPapers(papers) {
   });
 }
 
+// 学术论文
+function renderConfs(confs) {
+  const table = document.querySelector(".conf-list");
+  confs.forEach((conf, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${index + 1}.</td>
+      <td>
+        <strong>${conf.title}</strong><br>
+        ${conf.authors}<br>
+        <em>${conf.venue}</em><br>
+        <a href="${conf.pdf}" target="_blank">[PDF]</a>
+      </td>
+    `;
+    table.appendChild(row);
+  });
+}
+
 // 科研项目
 function renderProjects(projects) {
   const ul = document.querySelector(".project-list");
@@ -73,6 +91,7 @@ function renderAwards(awards) {
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
+  loadData("data/confs.json", renderConfs);
   loadData("data/projects.json", renderProjects);
   loadData("data/teaching.json", renderTeaching);
   loadData("data/awards.json", renderAwards);
