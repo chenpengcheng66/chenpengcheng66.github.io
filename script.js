@@ -1,79 +1,90 @@
 // 通用加载函数
-async function loadData(url, callback) {
+async function loadData(url, renderFn) {
   try {
-    const response = await fetch(url);
-    const data = await response.json();
-    callback(data);
-  } catch (error) {
-    console.error(`加载 ${url} 失败：`, error);
+    const res = await fetch(url);
+    const data = await res.json();
+    renderFn(data);
+  } catch (err) {
+    console.error("加载失败:", url, err);
   }
 }
 
-/* ===== 渲染函数 ===== */
-
-// 新闻动态（只显示最新3条）
-function renderNews(news) {
-  const ul = document.querySelector(".news-list");
-  news.slice(0, 3).forEach(item => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>[${item.date}]</strong> ${item.text}`;
-    ul.appendChild(li);
-  });
-}
-
-// 学术论文
+// 渲染论文
 function renderPapers(papers) {
   const table = document.querySelector(".paper-list");
-  papers.forEach((paper, index) => {
+  papers.forEach((p, i) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${index + 1}.</td>
+      <td>${i + 1}.</td>
       <td>
-        <strong>${paper.title}</strong><br>
-        ${paper.authors}<br>
-        <em>${paper.venue}</em><br>
-        <a href="${paper.pdf}" target="_blank">[PDF]</a>
+        <strong>${p.title}</strong><br>
+        ${p.authors}<br>
+        <em>${p.venue}</em><br>
+        <a href="${p.pdf}" target="_blank">[PDF]</a>
       </td>
     `;
     table.appendChild(row);
   });
 }
 
-// 科研项目
+// 渲染项目
 function renderProjects(projects) {
   const ul = document.querySelector(".project-list");
-  projects.forEach(proj => {
+  projects.forEach(p => {
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${proj.name}</strong> （${proj.period}，${proj.role}）<br>${proj.desc}`;
+    li.innerHTML = `<strong>${p.title}</strong> (${p.year})<br>${p.desc}`;
     ul.appendChild(li);
   });
 }
 
-// 教学经历
+// 渲染教学
 function renderTeaching(teaching) {
   const ul = document.querySelector(".teaching-list");
-  teaching.forEach(item => {
+  teaching.forEach(t => {
     const li = document.createElement("li");
-    li.textContent = `${item.time}，${item.course}，${item.role}`;
+    li.textContent = `${t.course} (${t.semester})`;
     ul.appendChild(li);
   });
 }
 
-// 荣誉与获奖
+// 渲染获奖
 function renderAwards(awards) {
   const ul = document.querySelector(".award-list");
-  awards.forEach(item => {
+  awards.forEach(a => {
     const li = document.createElement("li");
-    li.textContent = `${item.year} 年，${item.award}`;
+    li.textContent = `${a.year} - ${a.title}`;
     ul.appendChild(li);
   });
 }
 
-/* ===== 页面加载后执行 ===== */
+// 渲染新闻
+function renderNews(news) {
+  const ul = document.querySelector(".news-list");
+  news.forEach(n => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>[${n.date}]</strong> ${n.text}`;
+    ul.appendChild(li);
+  });
+}
+
+// 标签切换
 document.addEventListener("DOMContentLoaded", () => {
-  loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
   loadData("data/projects.json", renderProjects);
   loadData("data/teaching.json", renderTeaching);
   loadData("data/awards.json", renderAwards);
+  loadData("data/news.json", renderNews);
+
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
 });
