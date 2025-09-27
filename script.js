@@ -69,10 +69,29 @@ function renderAwards(awards) {
   });
 }
 
+// 学术会议论文
+function renderConfPapers(confpapers) {
+  const table = document.querySelector(".confpaper-list");
+  confpapers.forEach((paper, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${index + 1}.</td>
+      <td>
+        <strong>${paper.title}</strong><br>
+        ${paper.authors}<br>
+        <em>${paper.venue}</em><br>
+        <a href="${paper.pdf}" target="_blank">[PDF]</a>
+      </td>
+    `;
+    table.appendChild(row);
+  });
+}
+
 /* ===== 页面加载后执行 ===== */
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
+  loadData("data/confpapers.json", renderConfPapers); // 新增
   loadData("data/projects.json", renderProjects);
   loadData("data/teaching.json", renderTeaching);
   loadData("data/awards.json", renderAwards);
