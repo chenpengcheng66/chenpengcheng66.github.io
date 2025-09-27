@@ -39,7 +39,6 @@ function renderPapers(papers) {
   });
 }
 
-// 学术论文
 function renderConfs(confs) {
   const table = document.querySelector(".paper-list");
   confs.forEach((conf, index) => {
