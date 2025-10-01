@@ -10,7 +10,6 @@ async function loadData(url, callback) {
 }
 
 /* ===== 渲染函数 ===== */
-
 // 新闻动态（只显示最新3条）
 function renderNews(news) {
   const ul = document.querySelector(".news-list");
@@ -21,7 +20,7 @@ function renderNews(news) {
   });
 }
 
-// 学术论文
+// 学术期刊论文
 function renderPapers(papers) {
   const table = document.querySelector(".paper-list");
   papers.forEach((paper, index) => {
@@ -39,37 +38,7 @@ function renderPapers(papers) {
   });
 }
 
-// 科研项目
-function renderProjects(projects) {
-  const ul = document.querySelector(".project-list");
-  projects.forEach(proj => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${proj.name}</strong> （${proj.period}，${proj.role}）<br>${proj.desc}`;
-    ul.appendChild(li);
-  });
-}
-
-// 教学经历
-function renderTeaching(teaching) {
-  const ul = document.querySelector(".teaching-list");
-  teaching.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = `${item.time}，${item.course}，${item.role}`;
-    ul.appendChild(li);
-  });
-}
-
-// 荣誉与获奖
-function renderAwards(awards) {
-  const ul = document.querySelector(".award-list");
-  awards.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = `${item.year} 年，${item.award}`;
-    ul.appendChild(li);
-  });
-}
-
-// 学术会议论文
+// 会议论文
 function renderConfPapers(confpapers) {
   const table = document.querySelector(".confpaper-list");
   confpapers.forEach((paper, index) => {
@@ -93,7 +62,7 @@ function renderEducation(education) {
   education.forEach(item => {
     const li = document.createElement("li");
 
-    // 处理导师
+    // 拼接导师信息
     let advisorParts = [];
     if (item.advisor && item.advisor.name && item.advisor.link) {
       advisorParts.push(`Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`);
@@ -101,8 +70,7 @@ function renderEducation(education) {
     if (item.coAdvisor && item.coAdvisor.name && item.coAdvisor.link) {
       advisorParts.push(`Co-advisor: <a href="${item.coAdvisor.link}" target="_blank">${item.coAdvisor.name}</a>`);
     }
-
-    let advisorsHtml = advisorParts.length > 0 ? `<br>${advisorParts.join(" &nbsp;&nbsp; ")}` : "";
+    const advisorsHtml = advisorParts.length > 0 ? `<br>${advisorParts.join(" &nbsp;&nbsp; ")}` : "";
 
     li.innerHTML = `
       <strong>${item.degree}</strong>, ${item.school} (${item.year})
@@ -112,18 +80,10 @@ function renderEducation(education) {
   });
 }
 
-
-
-
-
-
 /* ===== 页面加载后执行 ===== */
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
-  loadData("data/confpapers.json", renderConfPapers); // 新增
-  loadData("data/projects.json", renderProjects);
-  loadData("data/teaching.json", renderTeaching);
-  loadData("data/awards.json", renderAwards);
+  loadData("data/confpapers.json", renderConfPapers);
   loadData("data/education.json", renderEducation);
 });
