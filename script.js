@@ -93,25 +93,25 @@ function renderEducation(education) {
   education.forEach(item => {
     const li = document.createElement("li");
 
-    // 主导师
-    let advisorHtml = "";
+    // 处理导师
+    let advisorParts = [];
     if (item.advisor && item.advisor.name && item.advisor.link) {
-      advisorHtml = `Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`;
+      advisorParts.push(`Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`);
+    }
+    if (item.coAdvisor && item.coAdvisor.name && item.coAdvisor.link) {
+      advisorParts.push(`Co-advisor: <a href="${item.coAdvisor.link}" target="_blank">${item.coAdvisor.name}</a>`);
     }
 
-    // 小导师（Co-advisor）
-    let coAdvisorHtml = "";
-    if (item.coAdvisor && item.coAdvisor.name && item.coAdvisor.link) {
-      coAdvisorHtml = `<br>Co-advisor: <a href="${item.coAdvisor.link}" target="_blank">${item.coAdvisor.name}</a>`;
-    }
+    let advisorsHtml = advisorParts.length > 0 ? `<br>${advisorParts.join(" &nbsp;&nbsp; ")}` : "";
 
     li.innerHTML = `
-      <strong>${item.degree}</strong>, ${item.school} (${item.year})<br>
-      ${advisorHtml}${coAdvisorHtml}
+      <strong>${item.degree}</strong>, ${item.school} (${item.year})
+      ${advisorsHtml}
     `;
     ul.appendChild(li);
   });
 }
+
 
 
 
