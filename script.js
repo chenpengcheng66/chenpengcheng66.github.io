@@ -92,10 +92,27 @@ function renderEducation(education) {
   const ul = document.querySelector(".education-list");
   education.forEach(item => {
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${item.degree}</strong>, ${item.school} (${item.year})<br>${item.detail}`;
+
+    // 主导师
+    let advisorHtml = "";
+    if (item.advisor && item.advisor.name && item.advisor.link) {
+      advisorHtml = `Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`;
+    }
+
+    // 小导师（Co-advisor）
+    let coAdvisorHtml = "";
+    if (item.coAdvisor && item.coAdvisor.name && item.coAdvisor.link) {
+      coAdvisorHtml = `<br>Co-advisor: <a href="${item.coAdvisor.link}" target="_blank">${item.coAdvisor.name}</a>`;
+    }
+
+    li.innerHTML = `
+      <strong>${item.degree}</strong>, ${item.school} (${item.year})<br>
+      ${advisorHtml}${coAdvisorHtml}
+    `;
     ul.appendChild(li);
   });
 }
+
 
 
 
