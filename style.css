@@ -100,6 +100,17 @@ body {
   text-decoration: underline;
 }
 
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;   /* 字体适中，不大不小 */
+}
+
+.education-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
 /* 通用列表 */
 ul {
