@@ -1,5 +1,10 @@
 [
   {
+    "degree": "B.S. in Electronic Information Science and Technology",
+    "school": "Southwest Petroleum University",
+    "year": "2011–2015"
+  },
+  {
     "degree": "Ph.D. in Geophysics",
     "school": "Sun Yat-sen University",
     "year": "2021–2025",
@@ -24,11 +29,5 @@
       "name": "Assoc. Prof. Quan Zhang",
       "link": "https://zqswpu.github.io"
     }
-  },
-  {
-    "degree": "B.S. in Electronic Information Science and Technology",
-    "school": "Southwest Petroleum University",
-    "year": "2011–2015"
   }
-  
 ]
