@@ -87,6 +87,19 @@ function renderConfPapers(confpapers) {
   });
 }
 
+// 教育经历
+function renderEducation(education) {
+  const ul = document.querySelector(".education-list");
+  education.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${item.degree}</strong>, ${item.school} (${item.year})<br>${item.detail}`;
+    ul.appendChild(li);
+  });
+}
+
+
+
+
 /* ===== 页面加载后执行 ===== */
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
@@ -95,4 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadData("data/projects.json", renderProjects);
   loadData("data/teaching.json", renderTeaching);
   loadData("data/awards.json", renderAwards);
+  loadData("data/education.json", renderEducation);
 });
