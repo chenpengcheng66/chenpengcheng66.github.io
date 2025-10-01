@@ -22,17 +22,15 @@ body {
   text-align: center;
 }
 
-
 .profile-pic {
-  width: 150px;        /* 控制宽度 */
-  height: auto;        /* 保持原始比例 */
-  border-radius: 0;    /* 不要圆角，保持矩形 */
-  object-fit: contain; /* 保证照片完整显示，不会被裁剪 */
-  border: 1px solid #ccc; /* 加个细边框，更像IEEE风格 */
+  width: 150px;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+  border: 1px solid #ccc;
   padding: 2px;
   background-color: #fff;
 }
-
 
 .sidebar h1 {
   margin: 10px 0;
@@ -49,6 +47,7 @@ body {
   border-bottom: 2px solid #444;
   padding-bottom: 5px;
   margin-top: 30px;
+  font-size: 1.3em;
 }
 
 /* 新闻动态 */
@@ -65,54 +64,41 @@ body {
 }
 
 /* 论文表格 */
-.paper-list {
-  width: 100%;
-  border-collapse: collapse;
-}
-.paper-list td {
-  padding: 10px 5px;
-  vertical-align: top;
-}
-.paper-list a {
-  color: #0066cc;
-  text-decoration: none;
-}
-.paper-list a:hover {
-  text-decoration: underline;
-}
-
+.paper-list,
 .confpaper-list {
   width: 100%;
   border-collapse: collapse;
 }
-
+.paper-list td,
 .confpaper-list td {
   padding: 10px 5px;
   vertical-align: top;
 }
-
+.paper-list a,
 .confpaper-list a {
   color: #0066cc;
   text-decoration: none;
 }
-
+.paper-list a:hover,
 .confpaper-list a:hover {
   text-decoration: underline;
 }
 
+/* 教育经历 */
 .education-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 15px;   /* 字体适中，不大不小 */
+  font-size: 15px;  /* 适中字体 */
 }
-
 .education-list li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.6;
 }
-
-/* 通用列表 */
-ul {
-  padding-left: 20px;
+.education-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.education-list a:hover {
+  text-decoration: underline;
 }
