@@ -1,17 +1,34 @@
 [
   {
-    "degree": "Lecturer",
-    "school": "School of Computer Science and Software Engineering, Southwest Petroleum University",
-    "year": "2025~",
-  },
-  
-  {
-    "degree": "Research Associate",
-    "school": "School of Resources and Environment, University of Electronic Science and Technology of China",
-    "year": "2020–2021",
+    "degree": "Ph.D. in Geophysics",
+    "school": "Sun Yat-sen University",
+    "year": "2021–2025",
     "advisor": {
-      "name": "Prof. Hua Wang",
-      "link": "https://faculty.uestc.edu.cn/huawang/zh_CN/index/306843/list/index.htm"
+      "name": "Prof. Shaoping Lu",
+      "link": "https://gs.sysu.edu.cn/teacher/LuShaoping"
+    },
+    "coAdvisor": {
+      "name": "Assoc. Prof. Chen Cai",
+      "link": "https://gs.sysu.edu.cn/teacher/CaiChen"
     }
+  },
+  {
+    "degree": "M.E. in Software Engineering",
+    "school": "Southwest Petroleum University",
+    "year": "2018–2020",
+    "advisor": {
+      "name": "Prof. Bo Peng",
+      "link": "https://mtubpeng1.github.io"
+    },
+    "coAdvisor": {
+      "name": "Assoc. Prof. Quan Zhang",
+      "link": "https://zqswpu.github.io"
+    }
+  },
+  {
+    "degree": "B.S. in Electronic Information Science and Technology",
+    "school": "Southwest Petroleum University",
+    "year": "2011–2015"
   }
+  
 ]
