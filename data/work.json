@@ -5,16 +5,12 @@
     "year": "2025~"
   },
   {
-    "degree": "Ph.D. in Geophysics",
-    "school": "Sun Yat-sen University",
-    "year": "2021–2025",
+    "degree": "Research Associate",
+    "school": "School of Resources and Environment, University of Electronic Science and Technology of China",
+    "year": "2020–2021",
     "advisor": {
-      "name": "Prof. Shaoping Lu",
-      "link": "https://gs.sysu.edu.cn/teacher/LuShaoping"
-    },
-    "coAdvisor": {
-      "name": "Assoc. Prof. Chen Cai",
-      "link": "https://gs.sysu.edu.cn/teacher/CaiChen"
+      "name": "Prof. Hua Wang",
+      "link": "https://faculty.uestc.edu.cn/huawang/zh_CN/index/306843/list/index.htm"
     }
   }
 ]
