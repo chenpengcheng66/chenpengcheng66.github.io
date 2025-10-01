@@ -1,29 +1,33 @@
 [
   {
     "degree": "Ph.D. in Geophysics",
-    "school": "Sun Yat-sen University, Zhuhai, China",
+    "school": "Sun Yat-sen University",
     "year": "2021–2025",
     "advisor": {
       "name": "Prof. Shaoping Lu",
       "link": "https://facultyhomepage.com/lu"
     },
     "coAdvisor": {
-      "name": "Dr. Wei Zhang",
+      "name": "Assoc. Prof. Chen Cai",
       "link": "https://facultyhomepage.com/zhang"
     }
   },
   {
     "degree": "M.E. in Software Engineering",
-    "school": "Southwest Petroleum University, Chengdu, China",
+    "school": "Southwest Petroleum University",
     "year": "2018–2020",
     "advisor": {
       "name": "Prof. Li Ming",
       "link": "https://facultyhomepage.com/li"
     }
+    "coAdvisor": {
+      "name": "Assoc. Prof. Quan Zhang",
+      "link": "https://facultyhomepage.com/zhang"
+    }
   },
   {
     "degree": "B.S. in Electronic Information Science and Technology",
-    "school": "Southwest Petroleum University, Chengdu, China",
+    "school": "Southwest Petroleum University",
     "year": "2011–2015"
   }
 ]
