@@ -43,14 +43,22 @@ body {
   padding: 20px 40px;
 }
 
+/* 标题（适中，不要太大） */
 .content h2 {
-  border-bottom: 1px solid #666;   /* 线条细一点 */
+  border-bottom: 1px solid #666;
   padding-bottom: 3px;
   margin-top: 25px;
-  font-size: 1.1em;                /* 字体缩小一点 */
-  font-weight: 600;                /* 字体稍微加粗，保持清晰 */
+  font-size: 1.15em;   /* 稍微比正文大 */
+  font-weight: 600;
 }
 
+/* 所有正文统一大小 */
+.content p,
+.content li,
+.content td {
+  font-size: 15px;
+  line-height: 1.6;
+}
 
 /* 新闻动态 */
 .news-list {
@@ -91,11 +99,9 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 15px;  /* 适中字体 */
 }
 .education-list li {
   margin-bottom: 12px;
-  line-height: 1.6;
 }
 .education-list a {
   color: #0066cc;
