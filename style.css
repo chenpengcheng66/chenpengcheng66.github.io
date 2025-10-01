@@ -94,19 +94,22 @@ body {
   text-decoration: underline;
 }
 
-/* 教育经历 */
+.work-list,
 .education-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+.work-list li,
 .education-list li {
   margin-bottom: 12px;
 }
+.work-list a,
 .education-list a {
   color: #0066cc;
   text-decoration: none;
 }
+.work-list a:hover,
 .education-list a:hover {
   text-decoration: underline;
 }
