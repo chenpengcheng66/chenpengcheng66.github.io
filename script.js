@@ -80,10 +80,36 @@ function renderEducation(education) {
   });
 }
 
+// 教育经历
+function renderWork(work) {
+  const ul = document.querySelector(".work-list");
+  work.forEach(item => {
+    const li = document.createElement("li");
+
+    let advisorParts = [];
+    if (item.advisor && item.advisor.name && item.advisor.link) {
+      advisorParts.push(`Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`);
+    }
+    if (item.coAdvisor && item.coAdvisor.name && item.coAdvisor.link) {
+      advisorParts.push(`Co-advisor: <a href="${item.coAdvisor.link}" target="_blank">${item.coAdvisor.name}</a>`);
+    }
+    const advisorsHtml = advisorParts.length > 0 ? `<br>${advisorParts.join(" &nbsp;&nbsp; ")}` : "";
+
+    li.innerHTML = `
+      <strong>${item.degree}</strong>, ${item.school} (${item.year})
+      ${advisorsHtml}
+    `;
+    ul.appendChild(li);
+  });
+}
+
+
+
 /* ===== 页面加载后执行 ===== */
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
   loadData("data/confpapers.json", renderConfPapers);
   loadData("data/education.json", renderEducation);
+  loadData("data/work.json", renderWork);
 });
