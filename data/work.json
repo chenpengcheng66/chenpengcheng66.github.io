@@ -1,8 +1,8 @@
 [
   {
     "degree": "Lecturer",
-    "school": "Southwest Petroleum University",
-    "year": "2011–2015"
+    "school": "School of Computer Science and Software Engineering, Southwest Petroleum University",
+    "year": "2025~"
   },
   {
     "degree": "Ph.D. in Geophysics",
@@ -15,19 +15,6 @@
     "coAdvisor": {
       "name": "Assoc. Prof. Chen Cai",
       "link": "https://gs.sysu.edu.cn/teacher/CaiChen"
-    }
-  },
-  {
-    "degree": "M.E. in Software Engineering",
-    "school": "Southwest Petroleum University",
-    "year": "2018–2020",
-    "advisor": {
-      "name": "Prof. Bo Peng",
-      "link": "https://mtubpeng1.github.io"
-    },
-    "coAdvisor": {
-      "name": "Assoc. Prof. Quan Zhang",
-      "link": "https://zqswpu.github.io"
     }
   }
 ]
