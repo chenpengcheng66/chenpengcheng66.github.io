@@ -3,18 +3,27 @@
     "degree": "Ph.D. in Geophysics",
     "school": "Sun Yat-sen University, Zhuhai, China",
     "year": "2021–2025",
-    "detail": "Focus on acoustic signal processing and geophysical imaging."
+    "advisor": {
+      "name": "Prof. Shaoping Lu",
+      "link": "https://facultyhomepage.com/lu"
+    },
+    "coAdvisor": {
+      "name": "Dr. Wei Zhang",
+      "link": "https://facultyhomepage.com/zhang"
+    }
   },
   {
     "degree": "M.E. in Software Engineering",
     "school": "Southwest Petroleum University, Chengdu, China",
     "year": "2018–2020",
-    "detail": "Research on high-performance computing and data processing."
+    "advisor": {
+      "name": "Prof. Li Ming",
+      "link": "https://facultyhomepage.com/li"
+    }
   },
   {
     "degree": "B.S. in Electronic Information Science and Technology",
     "school": "Southwest Petroleum University, Chengdu, China",
-    "year": "2011–2015",
-    "detail": "Undergraduate studies in electronics and computer science."
+    "year": "2011–2015"
   }
 ]
