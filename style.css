@@ -91,6 +91,12 @@ body {
   text-decoration: underline;
 }
 
+.paper-source {
+  font-size: 14px;
+  color: #555;
+  margin-top: 3px;
+}
+
 .work-list,
 .education-list {
   list-style: none;
