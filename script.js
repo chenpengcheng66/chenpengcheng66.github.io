@@ -17,64 +17,34 @@ function renderNews(news) {
   });
 }
 
-// 学术期刊论文
 function renderPapers(papers) {
   const table = document.querySelector(".paper-list");
   papers.forEach((paper, index) => {
     const row = document.createElement("tr");
-
-    // 可选的 PDF 和 Code
-    let links = [];
-    if (paper.pdf) {
-      links.push(`<a href="${paper.pdf}" target="_blank">[PDF]</a>`);
-    }
-    if (paper.code) {
-      links.push(`<a href="${paper.code}" target="_blank">[Code]</a>`);
-    }
-    let linksHtml = links.length > 0 ? links.join(" ") : "";
-
-    // 来源（source）
-    let sourceHtml = paper.source ? `<div class="paper-source">${paper.source}</div>` : "";
-
     row.innerHTML = `
       <td>${index + 1}.</td>
       <td>
         <strong>${paper.title}</strong><br>
         ${paper.authors}<br>
         <em>${paper.venue}</em><br>
-        ${linksHtml}
-        ${sourceHtml}
+        <a href="${paper.pdf}" target="_blank">[PDF]</a>
       </td>
     `;
     table.appendChild(row);
   });
 }
 
-// 会议论文
 function renderConfPapers(confpapers) {
   const table = document.querySelector(".confpaper-list");
   confpapers.forEach((paper, index) => {
     const row = document.createElement("tr");
-
-    let links = [];
-    if (paper.pdf) {
-      links.push(`<a href="${paper.pdf}" target="_blank">[PDF]</a>`);
-    }
-    if (paper.code) {
-      links.push(`<a href="${paper.code}" target="_blank">[Code]</a>`);
-    }
-    let linksHtml = links.length > 0 ? links.join(" ") : "";
-
-    let sourceHtml = paper.source ? `<div class="paper-source">${paper.source}</div>` : "";
-
     row.innerHTML = `
       <td>${index + 1}.</td>
       <td>
         <strong>${paper.title}</strong><br>
         ${paper.authors}<br>
         <em>${paper.venue}</em><br>
-        ${linksHtml}
-        ${sourceHtml}
+        <a href="${paper.pdf}" target="_blank">[PDF]</a>
       </td>
     `;
     table.appendChild(row);
