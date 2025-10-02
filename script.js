@@ -33,12 +33,13 @@ function renderPapers(papers) {
     if (paper.code) {
       links.push(`<a href="${paper.code}" target="_blank">[Code]</a>`);
     }
-    let linksHtml = links.join(" ");
 
-    // Source
-    let sourceHtml = paper.source
-      ? `<div class="paper-source">${paper.source}</div>`
-      : "";
+    // Source 和链接在同一行
+    let linksAndSource = "";
+    if (links.length > 0 || paper.source) {
+      linksAndSource =
+        `<div class="paper-links">${links.join(" ")} ${paper.source || ""}</div>`;
+    }
 
     row.innerHTML = `
       <td>${index + 1}.</td>
@@ -46,8 +47,7 @@ function renderPapers(papers) {
         <strong>${paper.title}</strong><br>
         ${paper.authors}<br>
         <em>${paper.venue}</em><br>
-        ${linksHtml}
-        ${sourceHtml}
+        ${linksAndSource}
       </td>
     `;
     table.appendChild(row);
@@ -69,11 +69,12 @@ function renderConfPapers(confpapers) {
     if (paper.code) {
       links.push(`<a href="${paper.code}" target="_blank">[Code]</a>`);
     }
-    let linksHtml = links.join(" ");
 
-    let sourceHtml = paper.source
-      ? `<div class="paper-source">${paper.source}</div>`
-      : "";
+    let linksAndSource = "";
+    if (links.length > 0 || paper.source) {
+      linksAndSource =
+        `<div class="paper-links">${links.join(" ")} ${paper.source || ""}</div>`;
+    }
 
     row.innerHTML = `
       <td>${index + 1}.</td>
@@ -81,8 +82,7 @@ function renderConfPapers(confpapers) {
         <strong>${paper.title}</strong><br>
         ${paper.authors}<br>
         <em>${paper.venue}</em><br>
-        ${linksHtml}
-        ${sourceHtml}
+        ${linksAndSource}
       </td>
     `;
     table.appendChild(row);
