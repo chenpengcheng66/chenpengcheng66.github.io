@@ -37,18 +37,16 @@ body {
   font-size: 1.5em;
 }
 
-/* 右侧内容 */
 .content {
   flex: 1;
   padding: 20px 40px;
 }
 
-/* 标题（适中，不要太大） */
 .content h2 {
   border-bottom: 1px solid #666;
   padding-bottom: 3px;
-  margin-top: 25px;
-  font-size: 1.15em;   /* 稍微比正文大 */
+  margin-top: 20px;
+  font-size: 20px;   /* 稍微比正文大 */
   font-weight: 600;
 }
 
