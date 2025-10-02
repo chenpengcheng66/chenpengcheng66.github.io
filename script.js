@@ -1,4 +1,3 @@
-// 通用加载函数
 async function loadData(url, callback) {
   try {
     const response = await fetch(url);
@@ -9,8 +8,6 @@ async function loadData(url, callback) {
   }
 }
 
-/* ===== 渲染函数 ===== */
-// 新闻动态（只显示最新3条）
 function renderNews(news) {
   const ul = document.querySelector(".news-list");
   news.slice(0, 3).forEach(item => {
@@ -20,7 +17,6 @@ function renderNews(news) {
   });
 }
 
-// 学术期刊论文
 function renderPapers(papers) {
   const table = document.querySelector(".paper-list");
   papers.forEach((paper, index) => {
@@ -38,7 +34,6 @@ function renderPapers(papers) {
   });
 }
 
-// 会议论文
 function renderConfPapers(confpapers) {
   const table = document.querySelector(".confpaper-list");
   confpapers.forEach((paper, index) => {
@@ -56,13 +51,11 @@ function renderConfPapers(confpapers) {
   });
 }
 
-// 教育经历
 function renderEducation(education) {
   const ul = document.querySelector(".education-list");
   education.forEach(item => {
     const li = document.createElement("li");
 
-    // 拼接导师信息
     let advisorParts = [];
     if (item.advisor && item.advisor.name && item.advisor.link) {
       advisorParts.push(`Advisor: <a href="${item.advisor.link}" target="_blank">${item.advisor.name}</a>`);
@@ -80,7 +73,6 @@ function renderEducation(education) {
   });
 }
 
-// 教育经历
 function renderWork(work) {
   const ul = document.querySelector(".work-list");
   work.forEach(item => {
@@ -103,9 +95,6 @@ function renderWork(work) {
   });
 }
 
-
-
-/* ===== 页面加载后执行 ===== */
 document.addEventListener("DOMContentLoaded", () => {
   loadData("data/news.json", renderNews);
   loadData("data/papers.json", renderPapers);
