@@ -4,7 +4,9 @@
     "authors": "Pengcheng Chen, Shaoping Lu, Chen Cai*.",
     "venue": "IEEE Transactions on Geoscience and Remote Sensing, 62:5924414, 2024.",
     "pdf": "assets/papers/24_TGAS_Automated Detection of Hyperbola-Shaped Signature in Sub-Bottom Profiler Sonar Image with Morphological Processing.pdf"
-    "source":"ASD"
+    "code": "https://github.com/chenpengcheng66/sbp-ml",
+    "source": "This work is based on data collected during the West Mariana Ridge survey project."
+
   },
 
   {
