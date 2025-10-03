@@ -126,7 +126,7 @@ body {
 
 .nav {
   margin-top: 20px;
-  text-align: center;
+  text-align: center; /* 居中导航 */
 }
 
 .nav ul {
@@ -136,17 +136,18 @@ body {
 }
 
 .nav li {
-  margin: 8px 0;
+  margin: 12px 0;
 }
 
 .nav a {
-  color: #0066cc;
+  color: #000;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px; 
   font-weight: 500;
 }
 
 .nav a:hover {
+  color: #555; 
   text-decoration: underline;
 }
 
