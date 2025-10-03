@@ -19,7 +19,13 @@ body {
   padding: 20px;
   border-right: 1px solid #ddd;
   text-align: center;
+
+  position: sticky;  /* 关键 */
+  top: 20px;         /* 离窗口顶部保持 20px */
+  align-self: flex-start;
+  height: fit-content; /* 保证高度自适应，不会拉伸 */
 }
+
 
 .profile-pic {
   width: 150px;
