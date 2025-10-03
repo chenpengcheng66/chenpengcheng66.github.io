@@ -33,6 +33,9 @@ function renderPapers(papers) {
     if (paper.code) {
       links.push(`<a href="${paper.code}" target="_blank">[Code]</a>`);
     }
+    if (paper.photo) {
+      links.push(`<a href="${paper.photo}" target="_blank">[Photo]</a>`);
+    }
 
     // Source 和链接在同一行
     let linksAndSource = "";
