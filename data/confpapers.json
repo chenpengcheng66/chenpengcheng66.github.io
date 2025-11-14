@@ -5,4 +5,10 @@
     "venue": " International Symposium on Parallel and Distributed Processing with Application, Xiamen, China, 2019 ",
     "pdf": "assets/papers/19_ISPA_Performance comparison of GPU-accelerated fast motion estimation method.pdf"
   }
+  {
+    "title": "Performance assessment of motion tracking methods in ultrasound-based shear wave elastography",
+    "authors": "Tingting He, Bo Peng*, Pengcheng Chen, Jingfeng Jiang",
+    "venue": " IEEE International Conference on Systems, Man, and Cybernetics, Toronto, Canada, 2020 ",
+    "pdf": "assets/papers/20_SMC_Performance Assessment of Motion Tracking Methods in Ultrasound-based Shear Wave Elastography.pdf"
+  }
 ]
